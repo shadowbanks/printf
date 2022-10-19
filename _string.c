@@ -3,5 +3,5 @@
 
 int _string(char *str, int n)
 {
-	(1, str, n);
+	return (write(1, str, n));
 }

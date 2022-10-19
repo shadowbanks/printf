@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <string.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -34,7 +33,7 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					str = va_arg(ap, char*);
-					write(1, str, strlen(str));
+					_string(str, strlen(str));
 					break;
 			}
 			i = i + 2;
