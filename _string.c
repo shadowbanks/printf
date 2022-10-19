@@ -1,4 +1,4 @@
-#include <unistd.h7>
+#include <unistd.h>
 
 /**
  * _string - prints a string
