@@ -43,12 +43,12 @@ int _printf(const char *format, ...)
 				case 'i':
 					_int = va_arg(ap, int);
 					print_number(_int);
-					count++;
+					count = count + count_number(_int);
 					break;
 				case 'd':
 					dec = va_arg(ap, int);
 					print_number(dec);
-					count++;
+					count = count + count_number(dec);
 					break;
 			}
 			i = i + 2;
@@ -62,6 +62,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(ap);
-	return (count);
+	printf("%d\n", count);
 }
-
