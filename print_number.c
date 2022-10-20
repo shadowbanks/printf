@@ -23,3 +23,17 @@ int print_number(int n)
 	i = _putchar((num % 10) + 48);
 	return (i);
 }
+
+/**
+  * count_number - count the length of a number
+  *
+  * @n: number
+  *
+  * @Return: length of the number
+  */
+int count_number(int n)
+{
+	if (n / 10 == 0)
+		return (1);
+	return (1 + count_number(n / 10));
+}
