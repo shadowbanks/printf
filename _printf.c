@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	char *str;
 	char rest;
-	int i = 0, ch, count = 0;
+	int i = 0, ch, count = 0, _int, dec;
 
 	va_list ap;
 
@@ -39,6 +39,16 @@ int _printf(const char *format, ...)
 					str = va_arg(ap, char*);
 					_string(str, strlen(str));
 					count = count + strlen(str);
+					break;
+				case 'i':
+					_int = va_arg(ap, int);
+					print_number(_int);
+					count++;
+					break;
+				case 'd':
+					dec = va_arg(ap, int);
+					print_number(dec);
+					count++;
 					break;
 			}
 			i = i + 2;
