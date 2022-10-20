@@ -29,7 +29,7 @@ int print_number(int n)
   *
   * @n: number
   *
-  * @Return: length of the number
+  * Return: length of the number
   */
 int count_number(int n)
 {
