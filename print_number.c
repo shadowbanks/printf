@@ -33,7 +33,19 @@ int print_number(int n)
   */
 int count_number(int n)
 {
-	if (n / 10 == 0)
-		return (1);
-	return (1 + count_number(n / 10));
+	int count = 0;
+	
+	if (n < 0)
+	{
+		n = -n;
+		count++;
+	}
+
+	while (n != 0)
+	{
+		count++;
+		n /= 10;
+	}
+
+	return (count);
 }
